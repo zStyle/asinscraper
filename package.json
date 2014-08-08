@@ -1,0 +1,8 @@
+{
+  "name": "Asin-scraper",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "crawler": "*"
+  }
+}
