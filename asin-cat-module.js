@@ -13,7 +13,10 @@ module.exports = function(url, callback){
   var c = new Crawler({
     "maxConnections": 10 || process.argv[3],
     "callback": function(err, result, $) {
-      if (err) console.err(err);
+      if (err) { 
+        console.err(err);
+        callback(err, null);
+      }
       else {
         $(".newaps a").each(function(index, a) {
           var asin = getAsin(a.href);
